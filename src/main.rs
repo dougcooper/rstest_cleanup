@@ -33,6 +33,7 @@ mod tests {
 
     #[dtor]
     fn cleanup() {
+        //this will crash if it's not 0
         assert_eq!(FOO.lock().unwrap().bar, 0);
     }
 }
